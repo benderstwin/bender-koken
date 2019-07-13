@@ -34,7 +34,7 @@ ADD https://koken-store.s3.amazonaws.com/plugins/be1cb2d9-ed05-2d81-85b4-2328283
 RUN unzip -d /usr/local/src /usr/local/src/Koken_Installer.zip \
     && rm /usr/local/src/Koken_Installer.zip
 
-COPY docker-entrypoint.sh /usr/local/bin/
+ADD docker-entrypoint.sh /docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
