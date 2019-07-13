@@ -36,5 +36,5 @@ RUN unzip -d /usr/local/src /usr/local/src/Koken_Installer.zip \
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["apache2-foreground"]
